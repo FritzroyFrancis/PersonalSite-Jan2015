@@ -1,0 +1,126 @@
+/* CSS Document */
+
+span
+{
+  position: relative;
+  font-size: 24px;
+}
+
+.padding-8
+{
+	padding: 8px;
+}
+
+.blogPost
+{
+	position: relative;
+	top: 20px;
+	font-size: 12px;
+	bottom: 25px;
+	white-space: pre-line;
+	margin-bottom: 25px;
+}
+
+ul#blogList
+{
+	width: 100%;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+ul#blogList li
+{
+	position: relative;
+	width: 100%;
+	max-height: 50px;
+	border: 1px solid white;
+	background-color: rgba(00, 00, 255, .1);
+	margin-bottom: 50px;
+	overflow: hidden;	
+	text-align: center;
+}
+
+ul#blogList li:hover
+{
+	background-color: rgba(00, 00, 255, .3);
+	cursor: pointer;	
+}
+
+.inView
+{
+    -webkit-animation: read .8s; /* Chrome, Safari, Opera */
+    animation: read .8s;
+}
+
+.outOfView
+{
+    -webkit-animation: noRead .8s; /* Chrome, Safari, Opera */
+    animation: noRead .8s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes read
+{
+    from {max-height: 50px !important;}
+    to {max-height: 1000px !important;}
+}
+
+/* Standard syntax */
+@keyframes read
+{
+    from {max-height: 50px !important;}
+    to {max-height: 1000px !important;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes noRead
+{
+    from {max-height: 1000px !important;}
+    to {max-height: 50px !important;}
+}
+
+/* Standard syntax */
+@keyframes noRead
+{
+    from {max-height: 1000px;}
+    to {max-height: 50px;}
+}
+
+@media screen and (max-width: 1280px)
+{
+	.content
+	{
+		width: 70% !important;
+		left: 15% !important;
+	}
+
+	ul#blogList li
+	{
+		background-color: rgba(00, 00, 255, .15);
+	}
+}
+
+@media screen and (max-width: 720px)
+{
+	.content
+	{
+		width: 90% !important;
+		left: 5% !important;
+	}
+	span
+	{
+		font-size: 20px;
+	}
+
+	.blogPost
+	{
+		top: 15px;
+		font-size: 10px;
+	}
+
+	.blogTitle
+	{
+		position: relative;
+		top: 6px;
+	}
+}

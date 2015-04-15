@@ -1,0 +1,146 @@
+/* CSS Document */
+
+span
+{
+  position: relative;
+  top: 48px;
+}
+
+audio
+{
+	opacity: 0;
+	display: none;
+}
+
+.grey
+{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+
+#songList
+{
+	position: absolute;
+	left: 50%;
+	left: calc(50% + 20px);
+	top: 0%;
+	width: 275px;
+	height: 275px;
+	background-color: rgba(0, 0, 255, .10);
+	border: 1px solid white;
+	padding: 25px;
+	overflow: auto;
+}
+
+#songList li
+{
+	font-size: 11px;
+	list-style-type: none;
+	text-decoration: none;
+	line-height: 24px;
+}
+
+#songList li:hover
+{
+	color: #337ab7;
+	cursor: pointer;
+}
+
+
+#songPlayer
+{
+	position: absolute;
+	left: 50%;
+	left: calc(50% - 270px);
+	top: 0%;
+	width: 250px;
+	height: 250px;
+	background-color: rgba(255, 255, 255, .30);
+}
+
+#progress-bar
+{
+	position: absolute;
+	bottom: -23px;
+	width: 100%;
+	height: 2px;
+	background-color: white;
+}
+
+#progress-bar:hover
+{
+	cursor: pointer;
+}
+
+#songTimeMeasure
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-color: #337ab7;
+}
+
+.music-controls
+{
+	position: absolute;
+	bottom: -16px;
+	margin: 0px 10px;
+	width: 12px;
+	height: 12px;
+	right: 0px;
+}
+
+#songDesc
+{
+	position: absolute;
+	top: 62.5%;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 25px;
+}
+
+@media screen and (max-width: 720px)
+{
+	#progress-bar
+	{
+		height: 5px;
+	}
+
+	span
+	{
+		font-size: 14px;
+	}
+	
+	#songPlayer
+	{
+		left: calc(50% - 125px);
+	}
+
+	#songList
+	{
+		left: calc(50% - 137.5px);
+		top: 330px;
+	}
+
+	#songDesc
+	{
+		position: absolute;
+		top: calc(62.5% + 230px);
+	}
+}
+
+
+
+@media screen and (max-height: 760px)
+{
+	#songDesc
+	{
+		top: 650px;
+	}
+}

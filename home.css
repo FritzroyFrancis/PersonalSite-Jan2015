@@ -1,0 +1,46 @@
+/* CSS Document */
+
+span
+{
+  position: relative;
+  top: 48px;
+}
+
+#mini-bio
+{
+	position: absolute;
+	top: 52.5%;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 25px;
+}
+
+#signature
+{
+	position: absolute;
+	max-height: 183px;
+	left: 50%;
+	margin-left: -385px;
+	top: 0%;
+}
+
+@media screen and (max-width: 720px)
+{
+	span
+	{
+		font-size: 14px;
+	}
+
+	#signature
+	{
+		width: 150%;
+		left: -25%;
+		top: 10%;
+		margin-left: 0;
+	}
+
+	#mini-bio
+	{
+		top: 40%;
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,45 @@
+<ul class="sections">
+    <li><a href="/">Home</a></li>
+    <li><a href="/music/">Music</a></li>
+    <li><a href="/projects/">Projects</a></li>
+    <li><a href="/blog/">Blog</a></li>
+</ul>
+
+<!--<div id="footer">
+	<span>
+		<p>Designed by F. Francis</p>
+		<p>November 2014</p>
+    </span>
+</div>-->
+
+<script>
+$(document).ready(function(e)
+{
+	var currentPage;
+
+	$(".sections li a").on("click", function(e)
+	{
+		e.preventDefault();
+		currentPage	= $(this).html();
+		/**/$(".sections li a").not(this).removeClass("navUnhover").addClass("navUnhover");	
+		$(".sections li a").not(this).css("color", "");	
+		$(this).css("color", "#337ab7");
+		if ($(this).html() == "Home") window.history.replaceState("object or string", "Home", "/");
+		else window.history.pushState("object or string", $(this).html(), "/" + $(this).html() + "");		
+	});
+
+	$(".sections li a").on("mouseover", function(e)
+	{
+		$(this).removeClass("navUnhover").addClass("navHover");
+	});
+
+	$(".sections li a").on("mouseout", function(e)
+	{
+		if($(this).html() != currentPage)
+		{
+			$(this).removeClass("navHover").addClass("navUnhover");		
+		}
+	});
+	
+});
+</script>
